@@ -15,10 +15,10 @@ def mask_color_rot(im, im_mask=None, angle=45, angle_roll=0.5):
     # rot_mx = ((mx1)*np.cos(th) - my1*np.sin(th) + WIDTH//2).astype(int) % WIDTH
     # rot_my = ((mx1)*np.sin(th) + my1*np.cos(th) + HEIGHT//2).astype(int) % HEIGHT
     
-    if im_mask == None:
-        im_mean = im.mean(axis=2)
+    if isinstance(im_mask, np.ndarray):
+        im_mean = im_mask.mean(axis=2)
     else:
-        im_mean = im_mean.mean(axis=2)
+        im_mean = im.mean(axis=2)
 
     th = im_mean*(angle_roll/180)*np.pi/2 + angle*np.pi/180
 
