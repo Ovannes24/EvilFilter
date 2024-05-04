@@ -3,6 +3,8 @@ EvilFilter
 
 EvilFilter is a fundamental package for insane image filters.
 
+![](sort/README.md)
+
 Sort
 ------------------------------
 | |Original|Filter|
