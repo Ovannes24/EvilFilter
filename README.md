@@ -3,9 +3,6 @@ EvilFilter
 
 EvilFilter is a fundamental package for insane image filters.
 
-<img src="sort/figures/original.jpg" width="150"/>
-<img src="color_rotation/figures/00000000.gif" width="150"/>
-
 Sort
 ------------------------------
 | |Original|Filter|
