@@ -126,7 +126,7 @@ def im_2d_rot_broken_sort_v1(im, angle=45, axis=0):
     ----------
     im : array_like
         Input array
-    angle ; 45, float
+    angle : 45, float
     axes : [0, 1, 2], tuple or list of ints, optional
 
     Returns
