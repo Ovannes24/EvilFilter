@@ -1,7 +1,7 @@
 import numpy as np
 from scipy import ndimage
 
-def im_2d_sort(im, axis=[0]):
+def im_2d_sort(im, axis=[1]):
     """
     Return a sorted copy of an image array.
 
@@ -102,8 +102,9 @@ def im_2d_rot_sort_v2(im, angle=45, axis=[1]):
 
 
     """
-    im_shape = np.array(im.shape)
+    angle = -angle
 
+    im_shape = np.array(im.shape)
     mask_tmp = ndimage.rotate(im*0+255 , angle, reshape=True)
     mask_sort = im_2d_sort(mask_tmp, axis=axis)
     im_tmp = ndimage.rotate(im, angle, reshape=True)
