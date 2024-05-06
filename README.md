@@ -3,7 +3,7 @@ EvilFilter
 
 EvilFilter is a fundamental package for insane image filters.
 
-Sort
+Sort Rotation
 ------------------------------
 | |Original|Filter|
 |:-:|-|-|
@@ -15,6 +15,10 @@ Sort
 
 Sort Step
 ------------------------------
+| |Original|Filter|
+|:-:|-|-|
+|`gen_bubble_sort_animation` |<img src="color_rotation/figures/original.jpg" width="300"/>      |<img src="sort_step/figures/output.gif" width="300"/>
+
 
 Color Rotation
 ------------------------------
