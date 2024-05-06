@@ -21,15 +21,20 @@ def gen_video_from_im_folder(image_folder):
 
     video.release()
 
-def gen_bubble_sort_animation(im, step=-1, sec=10):
+def gen_bubble_sort_animation(im, step=-1, mask='random', sec=10):
     dir_name = './tmp_im'
     if not os.path.isdir(dir_name):
         os.mkdir(dir_name)
 
     H, W, C = im.shape
-    m = np.mgrid[0:H, 0:W][1]
-    for k in range(H):
-        m[k] = np.random.permutation(m[k])
+    if mask=='random':
+        m = np.mgrid[0:H, 0:W][1]
+        for k in range(H):
+            m[k] = np.random.permutation(m[k])
+    elif mask=='mean':
+        m = im.mean(axis=2).astype(int)
+    else:
+        m = im.mean(axis=2).astype(int)
 
 
     n = len(im[0])
@@ -41,7 +46,7 @@ def gen_bubble_sort_animation(im, step=-1, sec=10):
                 Image.fromarray(
                     np.take_along_axis(
                         im, 
-                        np.transpose(np.tile(bubble_sort(m, 1000), (3, 1, 1)), (1,2,0)), axis=1).astype(np.uint8)
+                        np.transpose(np.tile(m, (3, 1, 1)), (1,2,0)), axis=1)
                 .astype(np.uint8)).save(dir_name+f"/{abs(step):016d}.jpg")
             step-=1
             if step == 0:
