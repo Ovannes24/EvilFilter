@@ -17,12 +17,12 @@ Sort Step
 ------------------------------
 | |Original|Filter|
 |:-:|-|-|
-|`gen_bubble_sort_animation` |<img src="color_rotation/figures/original.jpg" width="300"/>      |<img src="sort_step/figures/output.gif" width="300"/>
+|`gen_bubble_sort_animation` |<img src="color_changer/figures/original.jpg" width="300"/>      |<img src="sort_step/figures/output.gif" width="300"/>
 
 
 Color Changer
 ------------------------------
 | |Original|Filter|
 |:-:|-|-|
-|`color_rotation` |<img src="color_rotation/figures/original.jpg" width="300"/>      |<img src="color_rotation/figures/00000000.gif" width="300"/>
-|`color_replacer` |<img src="color_rotation/figures/original.jpg" width="300"/>      |<img src="color_rotation/figures/00000001.jpg" width="300"/>
+|`color_rotation` |<img src="color_changer/figures/original.jpg" width="300"/>      |<img src="color_changer/figures/00000000.gif" width="300"/>
+|`color_replacer` |<img src="color_changer/figures/original.jpg" width="300"/>      |<img src="color_changer/figures/00000001.jpg" width="300"/>
