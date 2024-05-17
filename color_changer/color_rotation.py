@@ -1,8 +1,25 @@
 import numpy as np
 
-def mask_color_rot(im, im_mask=None, angle=45, angle_roll=0.5):
+def color_rotation(im, im_mask=None, angle=45, angle_roll=0.5):
     """
-    
+    Return a color rotation of im by im_mask.
+
+    Parameters
+    ----------
+    im1 : array_like
+        Input array
+    im_mask : array_like
+        Input array
+    angle : float
+    angle_roll : float
+
+
+    Returns
+    -------
+    im : ndarray
+        Array of the same type and shape as `im` and `im_mask`.
+
+
     """
     HEIGHT, WIDTH, COLORSIZE = im.shape
     mx, my = np.meshgrid(np.arange(WIDTH), np.arange(HEIGHT))

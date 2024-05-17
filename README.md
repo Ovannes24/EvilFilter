@@ -20,8 +20,9 @@ Sort Step
 |`gen_bubble_sort_animation` |<img src="color_rotation/figures/original.jpg" width="300"/>      |<img src="sort_step/figures/output.gif" width="300"/>
 
 
-Color Rotation
+Color Changer
 ------------------------------
 | |Original|Filter|
 |:-:|-|-|
-|`mask_color_rot` |<img src="color_rotation/figures/original.jpg" width="300"/>      |<img src="color_rotation/figures/00000000.gif" width="300"/>
+|`color_rotation` |<img src="color_rotation/figures/original.jpg" width="300"/>      |<img src="color_rotation/figures/00000000.gif" width="300"/>
+|`color_replacer` |<img src="color_rotation/figures/original.jpg" width="300"/>      |<img src="color_rotation/figures/00000001.jpg" width="300"/>
