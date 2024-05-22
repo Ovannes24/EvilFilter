@@ -26,3 +26,4 @@ Color Changer
 |:-:|-|-|
 |`color_rotation` |<img src="color_changer/figures/original.jpg" width="300"/>      |<img src="color_changer/figures/00000000.gif" width="300"/>
 |`color_replacer` |<img src="color_changer/figures/original.jpg" width="300"/>      |<img src="color_changer/figures/00000001.jpg" width="300"/>
+|`color_restore` |<img src="color_changer/figures/original1.jpg" width="300"/>      |<img src="color_changer/figures/00000001.gif" width="300"/>
