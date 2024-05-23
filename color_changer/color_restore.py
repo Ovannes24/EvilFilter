@@ -19,7 +19,7 @@ def restore_line_pixels(a, b, shift=3):
 
     return argmask
 
-def color_restore(im, shift=3):
+def color_restore(im1, im2, shift=3):
     """
     Return a color restore of im by shift.
 
@@ -38,24 +38,25 @@ def color_restore(im, shift=3):
 
     """
     
-    im1 = np.mean(im, axis=2)
+    im1_mean = np.mean(im1, axis=2)
+    im2_mean = np.mean(im2, axis=2)
 
     
-    im1_list = []
-    h, w = im1.shape
+    im2_list = []
+    h, w = im1_mean.shape
 
     for i in range(0, h):
-        a = im1[i-1]
-        b = im1[i]
+        a = im1_mean[i]
+        b = im2_mean[i]
 
-        im1_list.append(restore_line_pixels(a, b, shift))
+        im2_list.append(restore_line_pixels(a, b, shift))
 
-    im1_list = np.array(im1_list)
-    im1 = im1_list
+    im2_list = np.array(im2_list)
+    # im1 = im2_list
 
 
     return np.take_along_axis(
-            im, 
-            np.transpose(np.tile(im1, (3, 1, 1)), (1,2,0)), 
+            im1, 
+            np.transpose(np.tile(im2_list, (3, 1, 1)), (1,2,0)), 
             axis=1
         )
